@@ -1,8 +1,8 @@
-# Angular2-Getting Started
-Materials for the "Angular 2: Getting Started" course on Pluralsight.
+1) Open a command prompt in the project's root directory (APM)
 
-`APM - Start`: The starter files. Use this to code along with the course.
-
-`APM - Final`: The completed files. Use this to see the completed solution from the course.
-
-See the `README.md` file under each folder for details on installing and running the application.
+2) Type: `npm install`
+    This installs the dependencies as defined in the package.json file.
+    
+3) Type: `npm start`
+    This launches the TypeScript compiler (tsc) to compile the application and wait for changes. 
+    It also starts the lite-server and launches the browser to run the application.
