@@ -11,6 +11,6 @@
     It also starts the lite-server and launches the browser to run the application.
 
 
-!()[screen/jannine.png]
+![](screen/jannine.png)
 
 
