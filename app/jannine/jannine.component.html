@@ -1,0 +1,9 @@
+<h1 class="ui header" *ngIf="false">Janine Weigel</h1>
+
+<div class="ui six cards">
+  <div class="card" *ngFor="#item of tracks">
+    <a class="image" [routerLink]="['TrackDetail', { id: item.id } ]">
+      <img src="{{item.artwork_url}}">
+      </a>
+  </div>
+</div>

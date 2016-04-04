@@ -7,6 +7,9 @@ import { ProductListComponent } from './products/product-list.component';
 import { ProductService } from './products/product.service';
 import { WelcomeComponent } from './home/welcome.component';
 import { ProductDetailComponent } from './products/product-detail.component';
+import { JannineComponent } from "./jannine/jannine.component";
+import { TrackDetailComponent} from "./jannine/track-detail.component";
+import { JanineService } from "./jannine/jannine.service";
 
 @Component({
     selector: 'pm-app',
@@ -18,6 +21,7 @@ import { ProductDetailComponent } from './products/product-detail.component';
                 <ul class='nav navbar-nav'>
                     <li><a [routerLink]="['Welcome']">Home</a></li>
                     <li><a [routerLink]="['Products']">Product List</a></li>
+                    <li><a [routerLink]="['Jannine']">Jannine</a></li>
                 </ul>
             </div>
         </nav>
@@ -29,13 +33,21 @@ import { ProductDetailComponent } from './products/product-detail.component';
     directives: [ROUTER_DIRECTIVES],
     providers: [ProductService,
                 HTTP_PROVIDERS,
+                JanineService,
                 ROUTER_PROVIDERS]
 })
 @RouteConfig([
     { path: '/welcome', name: 'Welcome', component: WelcomeComponent, useAsDefault: true },
     { path: '/products', name: 'Products', component: ProductListComponent },
-    { path: '/product/:id', name: 'ProductDetail', component: ProductDetailComponent }
+    { path: '/product/:id', name: 'ProductDetail', component: ProductDetailComponent },
+    { path: "/jannine", name : "Jannine", component: JannineComponent },
+    { path: "/jannine/:id", name: "TrackDetail", component: TrackDetailComponent }
 ])
 export class AppComponent {
     pageTitle: string = 'Acme Product Management';
+}
+
+export class Hello {
+    a: string;
+    b: string;
 }
